@@ -1,0 +1,109 @@
+@import 'variables';
+
+.title{
+    color: $dark-blue;
+    font-size: 20px;
+    font-family: $font-plo-r;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.07em;
+}
+.text{
+    color: $dark-blue;
+    font-size: 14px;
+    font-family: $font-plo-r;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 0.07em;
+}
+/*********************/
+.clr-gray{
+    color: $gray;
+}
+.clr-light-gray{
+    color: $light-gray;
+}
+.clr-light-gray-2{
+    color: $light-gray-2;
+}
+.clr-light-gray-3{
+    color: $light-gray-3;
+}
+.clr-dark-blue{
+    color: $dark-blue;
+}
+
+/*********************/
+.btn{
+    font-size: 14px;
+    border-radius: 0;
+    height: $h-md;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $font-plo-r;
+    &.btn-lg{
+        height: $h-lg;
+    }
+    &.btn-xl{
+        height: $h-xl;
+    }
+}
+.btn-pink{
+    background: $pink;
+    border-color: $pink;
+    color: #fff;
+    &:hover{
+        background: $pink;
+        border-color: $pink;
+        color: #fff;  
+    }
+    &:focus{
+        box-shadow: none;
+        border: none;
+        outline: none;
+    }
+}
+/*********************/
+.font-arq-r{
+    font-family: $font-arq-r;
+}
+.font-plo-r{
+    font-family: $font-plo-r;
+}
+/*********************/
+@mixin font-size($size) {
+    .fs-#{$size} {
+        font-size: unquote($size+px);
+    }
+}
+
+@include font-size(8);
+@include font-size(10);
+@include font-size(12);
+@include font-size(14);
+@include font-size(16);
+@include font-size(18);
+@include font-size(20);
+@include font-size(22);
+@include font-size(24);
+@include font-size(26);
+@include font-size(28);
+@include font-size(30);
+@include font-size(50);
+@include font-size(70);
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+.cursor-pointer{
+    cursor: pointer;
+}
+.ls-1{
+    letter-spacing: 0.07em;
+}
+.w-268px{
+    width: 268px;
+}
+
+/*********************/
