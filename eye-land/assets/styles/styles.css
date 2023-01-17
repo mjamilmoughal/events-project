@@ -11,19 +11,19 @@
 /****************************************/
 html, body {
   height: 100%;
+  overflow: hidden;
   font-family: "Arquitecta-Regular";
 }
 
 /****************************************/
 .body-wrapper {
   height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
 }
-.body-wrapper .body-content {
-  height: 100%;
-}
-
 /****************************************/
 .header {
+  z-index: 9;
   width: 100%;
 }
 .header .header-top {
@@ -35,6 +35,7 @@ html, body {
 }
 .header .navbar {
   background: transparent;
+  height: 70px;
   overflow: hidden;
   padding: 0 60px;
 }
@@ -73,6 +74,9 @@ html, body {
 .header .navbar .navbar-brand a img.logo-dark {
   display: none;
 }
+.header .navbar.nav-white {
+  background: #fff;
+}
 .header .navbar.nav-white .collapse .navbar-nav .nav-item .nav-link {
   color: #22252F;
   font-size: 16px;
@@ -83,6 +87,70 @@ html, body {
 }
 .header .navbar.nav-white .collapse .navbar-brand a img.logo-light {
   display: none;
+}
+
+/****************************************/
+.footer {
+  padding: 50px 0 100px 0;
+}
+.footer .footer-top-border {
+  height: 0.094rem;
+  background: #22252F;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.footer .footer-list-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+.footer .footer-list-menu li {
+  font-family: "Ploni-Regular";
+  font-size: 13px;
+  color: #22252F;
+  margin-top: 5px;
+}
+.footer .footer-list-menu li a {
+  text-decoration: none;
+  font-family: "Ploni-Regular";
+  font-size: 13px;
+  color: #22252F;
+}
+.footer .footer-tags {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.footer .footer-tags p {
+  color: #22252F;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 5px;
+}
+.footer .footer-logo {
+  width: 55%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  margin-bottom: 25px;
+}
+.footer .form-group .form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #989898;
+}
+.footer .form-group .form-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+.footer .form-group label {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Ploni-Regular";
 }
 
 /****************************************/
@@ -158,33 +226,44 @@ html, body {
   border-left: 1px solid #C4C5C6;
 }
 
+/****************************************/
 .page-title {
   text-align: center;
+  margin-bottom: 50px;
 }
 .page-title h1 {
   color: #22252F;
   margin: 0;
-  font-size: 80px;
+  font-size: 70px;
   font-weight: 500;
 }
 .page-title p {
   font-family: "Ploni-Regular";
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   color: #22252F;
   margin: 0;
+  margin-top: 10px;
+}
+.page-title .title-border-bottom {
+  height: 2px;
+  background: #22252F;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 /****************************************/
-.hotles-swiper {
-  overflow: hidden;
+.swiper-container {
+  padding: 0 130px;
 }
 
-.hotles .hotel .image {
+/****************************************/
+.hotles-swiper .hotel .image {
   height: 550px;
   width: 100%;
 }
-.hotles .hotel .image img {
+.hotles-swiper .hotel .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -192,13 +271,72 @@ html, body {
   -o-object-position: center;
      object-position: center;
 }
-.hotles .hotel .hotal-info {
+.hotles-swiper .hotel .hotal-info {
   margin-top: 19px;
 }
-.hotles .hotel .hotal-info .ratings i {
+.hotles-swiper .hotel .hotal-info .ratings i {
   font-size: 14px;
 }
 
+/****************************************/
+.performances-swiper .item .image {
+  height: 550px;
+  width: 100%;
+}
+.performances-swiper .item .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.performances-swiper .item .hotal-info {
+  margin-top: 19px;
+}
+.performances-swiper .item .hotal-info .ratings i {
+  font-size: 14px;
+}
+
+/****************************************/
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.filter ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Ploni-Regular";
+  font-size: 16px;
+}
+.filter ul .border-line {
+  background: #989898;
+  border: 1px solid #989898;
+}
+.filter ul li {
+  color: #989898;
+}
+
+/****************************************/
+.hotal-images {
+  width: 100%;
+  height: 587px;
+}
+.hotal-images img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+/****************************************/
+/****************************************/
 /****************************************/
 .title {
   color: #22252F;
@@ -235,6 +373,10 @@ html, body {
   color: #DBDBDB;
 }
 
+.clr-light-gray-4 {
+  color: #989898;
+}
+
 .clr-dark-blue {
   color: #22252F;
 }
@@ -267,7 +409,21 @@ html, body {
 }
 .btn-pink:focus {
   box-shadow: none;
-  border: none;
+  outline: none;
+}
+
+.btn-transparent-outline {
+  background: #fff;
+  color: #C4C5C6;
+  border: 1px solid #C4C5C6;
+}
+.btn-transparent-outline:hover {
+  background: #fff;
+  color: #C4C5C6;
+  border: 1px solid #C4C5C6;
+}
+.btn-transparent-outline:focus {
+  box-shadow: none;
   outline: none;
 }
 
@@ -352,6 +508,15 @@ html, body {
 
 .w-268px {
   width: 268px;
+}
+
+hr {
+  border-color: #22252F;
+  border-width: 2px;
+  opacity: 1;
+}
+hr.lg {
+  margin: 2rem 0;
 }
 
 /*********************//*# sourceMappingURL=styles.css.map */

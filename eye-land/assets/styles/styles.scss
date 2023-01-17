@@ -8,20 +8,24 @@ $header:$header-top+$navbar;
 /****************************************/
 html,body{
     height: 100%;
-    // overflow: hidden;
+    overflow: hidden;
     font-family: $font-arq-r;
 }
 /****************************************/
 .body-wrapper{
     height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
     .body-content{
-        // padding-top: $header;
-        height: 100%;
+        // padding-top: $header + 50px;
+        // height: 100%;
     }
 }
 /****************************************/
 .header{
     // position: fixed;
+    // top: 0;
+    z-index: 9;
     width: 100%;
     .header-top{
         background: $dark-blue;
@@ -32,7 +36,7 @@ html,body{
     }
     .navbar{
         background: transparent;
-        // height: 70px;
+        height: $navbar;
         overflow: hidden;
         padding: 0 60px;
         .collapse {
@@ -72,6 +76,7 @@ html,body{
             }
         }
         &.nav-white{
+            background: #fff;
             .collapse{
                 .navbar-nav{
                     .nav-item{
@@ -98,6 +103,69 @@ html,body{
                 }
             }
             
+        }
+    }
+}
+/****************************************/
+.footer{
+    .footer-top-border{
+        height: 0.094rem;
+        background: #22252F;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom:50px ;
+    }
+    padding: 50px 0 100px 0;
+    .footer-list-menu{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+        li{
+            font-family: $font-plo-r;
+                font-size: 13px;
+                color: $dark-blue;
+                margin-top: 5px;
+            a{
+                text-decoration: none;
+                font-family: $font-plo-r;
+                font-size: 13px;
+                color: $dark-blue;
+            }
+        }
+    }
+    .footer-tags{
+        display: flex;
+        gap: 50px;
+        margin-bottom: 50px;
+        p{
+            color: $dark-blue;
+            font-size: 28px;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: 5px
+        }
+    }
+    .footer-logo{
+        width: 55%;
+        object-fit: contain;
+        object-position: center;
+        margin-bottom: 25px;
+    }
+    .form-group{
+        .form-control{
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid #989898;
+            &:focus{
+                box-shadow: none;
+                outline: none;
+            }
+        }
+        label{
+            font-size: 13px;
+            font-weight: 400;
+            font-family: $font-plo-r;
         }
     }
 }
@@ -171,28 +239,40 @@ html,body{
         }
     }
 }
+/****************************************/
 .page-title{
     text-align: center;
+    margin-bottom: 50px;
     h1{
         color: $dark-blue;
         margin: 0;
-        font-size: 80px;
+        font-size: 70px;
         font-weight: 500
         
     }
     p{
         font-family: $font-plo-r;
         font-weight: 500;
-font-size: 24px;
+font-size: 20px;
 color: $dark-blue;
 margin: 0;
+margin-top: 10px;
+    }
+    .title-border-bottom{
+        
+        height: 2px;
+        background: $dark-blue;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 10px;
     }
 }
 /****************************************/
-.hotles-swiper{
-    overflow: hidden;
+.swiper-container{
+padding: 0 130px;
 }
-.hotles{
+/****************************************/
+.hotles-swiper{
     .hotel{
         // max-width: 455px;
         // min-width: 455px;
@@ -218,5 +298,65 @@ margin: 0;
     }
 }
 /****************************************/
-
+.performances-swiper{
+    .item{
+        // max-width: 455px;
+        // min-width: 455px;
+        // width: 455px;
+        .image{
+            height: 550px;
+            width: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center
+            }
+        }
+        .hotal-info{
+            margin-top: 19px;
+            .ratings{
+                i{
+                    font-size: 14px
+                }
+            }
+        }
+    }
+}
+/****************************************/
+.filter{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    ul{
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-family: $font-plo-r;
+        font-size: 16px;
+        .border-line{
+            background: #989898;
+            border: 1px solid #989898;
+        }
+        li{
+            color: $light-gray-4
+        }
+    }
+}
+/****************************************/
+.hotal-images{
+    width: 100%;
+    height: 587px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center
+    }
+}
+/****************************************/
+/****************************************/
+/****************************************/
 @import 'utilities';
