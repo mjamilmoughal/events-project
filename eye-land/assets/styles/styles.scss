@@ -23,8 +23,8 @@ html,body{
 }
 /****************************************/
 .header{
-    // position: fixed;
-    // top: 0;
+    position: fixed;
+    top: 0;
     z-index: 9;
     width: 100%;
     .header-top{
@@ -170,13 +170,17 @@ html,body{
     }
 }
 /****************************************/
-.baner{
+.hero-img{
     background: url(../images/baner.png);
-    height: 100%;
-    overflow: hidden;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+}
+.baner{
+    
+    height: 100%;
+    overflow: hidden;
+    
     .baner-content{
         height: 100%;
         width: 90%;
@@ -314,6 +318,29 @@ padding: 0 130px;
             }
         }
         .hotal-info{
+            margin-top: 19px;
+            .ratings{
+                i{
+                    font-size: 14px
+                }
+            }
+        }
+    }
+}
+/****************************************/
+.event-card{
+    .item{
+        .image{
+            height: 550px;
+            width: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center
+            }
+        }
+        .content{
             margin-top: 19px;
             .ratings{
                 i{
