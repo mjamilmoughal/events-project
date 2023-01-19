@@ -2,7 +2,7 @@
 
 .title{
     color: $dark-blue;
-    font-size: 20px;
+    font-size: 24px;
     font-family: $font-plo-r;
     font-weight: 600;
     margin: 0;
@@ -105,9 +105,22 @@
 @include font-size(26);
 @include font-size(28);
 @include font-size(30);
+@include font-size(34);
 @include font-size(50);
 @include font-size(70);
 /*********************/
+@mixin font-weight($size) {
+    .fw-#{$size} {
+        font-weight: $size;
+    }
+}
+
+@include font-weight(400);
+@include font-weight(500);
+@include font-weight(600);
+@include font-weight(700);
+@include font-weight(800);
+@include font-weight(900);
 /*********************/
 /*********************/
 /*********************/
@@ -128,5 +141,8 @@ hr{
  &.lg{
     margin: 2rem 0;
  }   
+}
+.lh-1{
+    line-height: 1;
 }
 /*********************/
